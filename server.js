@@ -6,7 +6,7 @@ const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 443;
 
 corsProxy.createServer({
-    originWhitelist: ['localhost:3000', 'localhost:3000/dashboard/settings', 'spots.portableprojects.nl'],
+    originWhitelist: ['localhost:3000', 'localhost:3000/dashboard/settings', 'https://spots.portableprojects.nl'],
     requireHeader: ['origin', 'x-requested-with'],
     removeHeaders: ['cookie', 'cookie2']
 }).listen(port, host, () => {
